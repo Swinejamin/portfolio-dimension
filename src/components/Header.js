@@ -1,13 +1,58 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import TransitionLink from 'gatsby-plugin-transition-link'
 import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+let pageIndex = 0
+
+const links = [
+  {
+    to: '/',
+    title: 'Intro',
+  },
+  {
+    to: '/about',
+    title: 'About',
+  },
+  {
+    to: '/work',
+    title: 'Work',
+  },
+  {
+    to: '/contact',
+    title: 'Contact',
+  },
+]
+
 const Header = props => (
-  <header id="header" style={props.timeout ? { display: 'none' } : {}}>
+  <header
+    id="header"
+    className={`${props.location.pathname === '/' ? '' : 'inner'}`}
+  >
+    <nav>
+      <ul>
+        {links.map((link, index) => {
+          const { title, to } = link
+          return (
+            <li>
+              <Link
+                fade
+                to={to}
+                entry={{ state: { pageIndex: index } }}
+                exit={{ state: { pageIndex: index } }}
+              >
+                {title}
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+    </nav>
     <div className="logo">
       <span className="icon fas fa-desktop" />
     </div>
-    <div className="content">
-      <div className="inner">
+    <div className={`content`}>
+      <div className={`blurb`}>
         <h1>Benjamin Swineford</h1>
         <p>
           A front end developer passionate about building things in{' '}
@@ -15,46 +60,6 @@ const Header = props => (
         </p>
       </div>
     </div>
-    <nav>
-      <ul>
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('intro')
-            }}
-          >
-            Intro
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('work')
-            }}
-          >
-            Work
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('about')
-            }}
-          >
-            About
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('contact')
-            }}
-          >
-            Contact
-          </button>
-        </li>
-      </ul>
-    </nav>
   </header>
 )
 

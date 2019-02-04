@@ -2,21 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import '../assets/scss/main.scss'
-
-const Layout = ({ children, location }) => {
-  let content
-
-  if (location && location.pathname === '/') {
-    content = <div>{children}</div>
-  } else {
-    content = (
-      <div id="wrapper" className="page">
-        <div>{children}</div>
-      </div>
-    )
-  }
+import Header from './Header'
+const Container = styled.div`
+  min-width: 320px;
+  max-width: 1200px;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+`
+const Layout = props => {
+  const { children, location } = props
 
   return (
     <StaticQuery
@@ -49,7 +52,10 @@ const Layout = ({ children, location }) => {
               crossorigin="anonymous"
             />
           </Helmet>
-          {content}
+          <div id="bg" />
+          <Header {...props} />
+
+          <Container>{children}</Container>
         </>
       )}
     />
