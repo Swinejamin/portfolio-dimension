@@ -67,5 +67,9 @@ Header.propTypes = {
   onOpenArticle: PropTypes.func,
   timeout: PropTypes.bool,
 }
-
+Header.defaultProps = {
+  location: {
+    pathname: undefined,
+  },
+}
 export default Header
