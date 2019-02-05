@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-
+import Img from 'gatsby-image'
 import '../assets/scss/main.scss'
 import Header from './Header'
 const Container = styled.div`
@@ -42,6 +42,13 @@ const Layout = props => {
               title
             }
           }
+          bg: file(relativePath: { eq: "code.jpg" }) {
+            childImageSharp {
+              fluid(maxWidth: 2160) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       `}
       render={data => (
@@ -64,7 +71,18 @@ const Layout = props => {
               crossorigin="anonymous"
             />
           </Helmet>
-          <div id="bg" />
+          <div id="bg">
+            <Img
+              fluid={data.bg.childImageSharp.fluid}
+              style={{
+                maxWidth: '100%',
+                height: '100%',
+                width: '100%',
+                flexShrink: 0,
+                margin: '0 auto',
+              }}
+            />
+          </div>
           <Header showFullHeader={showFullHeader} />
           {children && (
             <Container>

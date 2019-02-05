@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: -1;
 
@@ -26,24 +26,6 @@
     height: 100%;
   }
 
-  &:before {
-    @include vendor(
-      'transition',
-      'background-color #{_duration(bg)} ease-in-out'
-    );
-    @include vendor('transition-delay', '#{_duration(intro)}');
-    background-image: linear-gradient(
-        to top,
-        #{_palette(bg-overlay)},
-        #{_palette(bg-overlay)}
-      ),
-      url('../../images/overlay.png');
-    background-size: auto, 256px 256px;
-    background-position: center, center;
-    background-repeat: no-repeat, repeat;
-    z-index: 2;
-  }
-
   &:after {
     @include vendor('transform', 'scale(1.125)');
     @include vendor(
@@ -54,11 +36,10 @@
       )
     );
     background-image: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.5) 55%,
-        rgba(0, 255, 255, 0.25)
-      ),
-      url('../../images/code.jpg');
+      135deg,
+      rgba(0, 0, 0, 0.5) 55%,
+      rgba(0, 255, 255, 0.25)
+    );
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
