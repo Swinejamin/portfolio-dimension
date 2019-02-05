@@ -36,6 +36,7 @@ export default class About extends Component {
         <span className="image main">
           <Img
             fluid={family.childImageSharp.fluid}
+            alt="Benjamin with family"
             style={{ maxWidth: 500, margin: '0 auto' }}
           />
         </span>

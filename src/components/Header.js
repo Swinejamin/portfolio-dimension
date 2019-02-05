@@ -44,6 +44,7 @@ const Header = props => {
           query={imageQuery}
           render={data => (
             <Img
+              alt="A headshot of Benjamin smiling."
               fluid={data.headshot.childImageSharp.fluid}
               style={{
                 maxWidth: '100%',

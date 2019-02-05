@@ -78,6 +78,7 @@ const Layout = props => {
           </Helmet>
           <div id="bg">
             <Img
+              alt="code on a computer screen"
               fluid={data.bg.childImageSharp.fluid}
               style={{
                 maxWidth: '100%',
