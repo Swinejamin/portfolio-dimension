@@ -59,7 +59,7 @@ const Header = props => {
       </div>
       <div className={`content`}>
         <div className={`blurb`}>
-          <h1>Benjamin Swineford | Front End Developer</h1>
+          <h1>Benjamin Swineford</h1>
           <p>
             A front end developer who loves building things in{' '}
             <a href="https://reactjs.org/">React</a>
