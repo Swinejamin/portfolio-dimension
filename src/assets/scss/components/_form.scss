@@ -27,6 +27,10 @@ form {
 
   > .actions {
     margin: ($gutter * 1.25) 0 0 0 !important;
+
+    button {
+      font-size: 1.8rem;
+    }
   }
 
   @include breakpoint(small) {
@@ -89,14 +93,13 @@ textarea {
     )
   );
   font-size: 1.6rem;
-
+  padding: 15px;
   background: transparent;
   border-radius: _size(border-radius);
   border: solid _size(border-width) _palette(border);
   color: inherit;
   display: block;
   outline: 0;
-  padding: 0 1rem;
   text-decoration: none;
   width: 100%;
 
@@ -141,17 +144,6 @@ select {
   select::-ms-expand {
     display: none;
   }
-}
-
-input[type='text'],
-input[type='password'],
-input[type='email'],
-select {
-  height: _size(element-height);
-}
-
-textarea {
-  padding: 0.75rem 1rem;
 }
 
 input[type='checkbox'],

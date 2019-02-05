@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
+import {
+  StyledButtonList,
+  StyledForm,
+  StyledFormField,
+  StyledLabel,
+  StyledIconList,
+} from '../components/Contact'
 export default class Contact extends Component {
   static propTypes = {
     prop: PropTypes,
@@ -15,7 +21,7 @@ export default class Contact extends Component {
         }`}
       >
         <h2 className="major">Contact Me</h2>
-        <form
+        <StyledForm
           name="contact"
           data-netlify="true"
           method="POST"
@@ -24,19 +30,19 @@ export default class Contact extends Component {
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <div className="field half first">
-            <label htmlFor="name">Name</label>
+          <StyledFormField className="field half first">
+            <StyledLabel htmlFor="name">Name</StyledLabel>
             <input type="text" name="name" id="name" required />
-          </div>
-          <div className="field half">
-            <label htmlFor="email">Email</label>
+          </StyledFormField>
+          <StyledFormField className="field half">
+            <StyledLabel htmlFor="email">Email</StyledLabel>
             <input type="email" name="email" id="email" required />
-          </div>
-          <div className="field">
-            <label htmlFor="message">Message</label>
+          </StyledFormField>
+          <StyledFormField className="field">
+            <StyledLabel htmlFor="message">Message</StyledLabel>
             <textarea name="message" required id="message" rows="4" />
-          </div>
-          <ul className="actions">
+          </StyledFormField>
+          <StyledButtonList className="actions">
             <li>
               <button type="submit" value="Send Message" className="special">
                 Submit
@@ -47,9 +53,9 @@ export default class Contact extends Component {
                 Reset
               </button>
             </li>
-          </ul>
-        </form>
-        <ul className="icons">
+          </StyledButtonList>
+        </StyledForm>
+        <StyledIconList>
           <li>
             <a
               target="_blank"
@@ -90,7 +96,7 @@ export default class Contact extends Component {
               <span className="label">GitHub</span>
             </a>
           </li>
-        </ul>
+        </StyledIconList>
       </article>
     )
   }
