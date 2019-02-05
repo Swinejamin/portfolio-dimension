@@ -66,7 +66,7 @@ Header.propTypes = {
 }
 Header.defaultProps = {
   location: {
-    pathname: undefined,
+    pathname: '/',
   },
 }
 export default Header
