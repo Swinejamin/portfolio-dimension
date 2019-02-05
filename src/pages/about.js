@@ -8,7 +8,6 @@ export default class About extends Component {
   render() {
     const { data } = this.props
     const { family } = data
-    console.log(family)
     return (
       <article id="about">
         <h2 className="major">About Me</h2>

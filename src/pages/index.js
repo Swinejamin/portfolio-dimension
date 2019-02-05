@@ -29,7 +29,6 @@ class IndexPage extends React.Component {
   state = {}
 
   render() {
-    console.log(this.props)
     const showCHildren = true
     return showCHildren ? (
       <List>

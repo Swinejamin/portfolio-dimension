@@ -24,7 +24,6 @@ const links = [
 
 const Header = props => {
   const { showFullHeader } = props
-  console.log(props)
 
   return (
     <header id="header" className={`${showFullHeader ? '' : 'inner'}`}>
