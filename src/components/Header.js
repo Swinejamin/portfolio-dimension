@@ -25,10 +25,7 @@ const Header = props => {
   const { location } = props
   const showFullHeader = ['', '/', '/success'].includes(location.pathname)
   return (
-    <header
-      id="header"
-      className={`${props.location.pathname === '/' ? '' : 'inner'}`}
-    >
+    <header id="header" className={`${showFullHeader ? '' : 'inner'}`}>
       <nav>
         <ul>
           {links.map((link, index) => {
