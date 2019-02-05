@@ -24,7 +24,7 @@ const Layout = props => {
   const showFullHeader = ['', '/', '/success', '/success/'].includes(
     location.pathname
   )
-
+  console.log(location.pathname)
   return (
     <StaticQuery
       query={graphql`
