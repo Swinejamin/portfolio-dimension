@@ -14,7 +14,7 @@ export default class Contact extends Component {
           this.props.articleTimeout ? 'timeout' : ''
         }`}
       >
-        <h2 className="major">Contact</h2>
+        <h2 className="major">Contact Benjamin</h2>
         <form netlify method="post" action="#">
           <div className="field half first">
             <label htmlFor="name">Name</label>
@@ -39,22 +39,34 @@ export default class Contact extends Component {
         </form>
         <ul className="icons">
           <li>
-            <a href="#" className="icon fab fa-twitter">
+            <a
+              href="https://www.twitter.com/swinejamin"
+              className="icon fab fa-twitter"
+            >
               <span className="label">Twitter</span>
             </a>
           </li>
           <li>
-            <a href="#" className="icon fab fa-facebook">
+            <a
+              href="https://www.facebook.com/swinejamin"
+              className="icon fab fa-facebook"
+            >
               <span className="label">Facebook</span>
             </a>
           </li>
           <li>
-            <a href="#" className="icon fab fa-instagram">
+            <a
+              href="https://www.instagram.com/swinejamin"
+              className="icon fab fa-instagram"
+            >
               <span className="label">Instagram</span>
             </a>
           </li>
           <li>
-            <a href="#" className="icon fab fa-github">
+            <a
+              href="https://www.github.com/swinejamin"
+              className="icon fab fa-github"
+            >
               <span className="label">GitHub</span>
             </a>
           </li>

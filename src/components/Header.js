@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import TransitionLink from 'gatsby-plugin-transition-link'
 import { Link } from 'gatsby'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
-let pageIndex = 0
 
 const links = [
   {

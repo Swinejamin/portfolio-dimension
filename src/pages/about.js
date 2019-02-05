@@ -1,22 +1,12 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import PageTransition from '../components/PageTransition'
 import pic03 from '../images/pic03.jpg'
 export default class About extends Component {
-  static propTypes = {
-    prop: PropTypes,
-  }
+  static propTypes = {}
 
   render() {
-    const { transitionStatus, entry, exit, children } = this.props
     return (
-      <article
-        id="about"
-        className={`${this.props.article === 'about' ? 'active' : ''} ${
-          this.props.articleTimeout ? 'timeout' : ''
-        }`}
-      >
-        <h2 className="major">About</h2>
+      <article id="about">
+        <h2 className="major">About Benjamin</h2>
         <span className="image main">
           <img src={pic03} alt="" />
         </span>

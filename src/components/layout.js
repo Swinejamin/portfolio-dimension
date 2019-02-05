@@ -19,7 +19,7 @@ const Container = styled.div`
   );
 `
 const Layout = props => {
-  const { children, location } = props
+  const { children } = props
 
   return (
     <StaticQuery
