@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-
+import Img from 'gatsby-image'
+import { graphql, StaticQuery } from 'gatsby'
 const links = [
   {
     to: '/',
@@ -23,6 +24,8 @@ const links = [
 
 const Header = props => {
   const { showFullHeader } = props
+  console.log(props)
+
   return (
     <header id="header" className={`${showFullHeader ? '' : 'inner'}`}>
       <nav>
@@ -38,7 +41,21 @@ const Header = props => {
         </ul>
       </nav>
       <div className="logo">
-        <span className="icon fas fa-desktop" />
+        <StaticQuery
+          query={imageQuery}
+          render={data => (
+            <Img
+              fluid={data.headshot.childImageSharp.fluid}
+              style={{
+                maxWidth: '100%',
+                height: '100%',
+                width: '100%',
+                flexShrink: 0,
+                margin: '0 auto',
+              }}
+            />
+          )}
+        />
       </div>
       <div className={`content`}>
         <div className={`blurb`}>
@@ -61,3 +78,14 @@ Header.defaultProps = {
   showFullHeader: true,
 }
 export default Header
+export const imageQuery = graphql`
+  query {
+    headshot: file(relativePath: { eq: "headshot.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 200, maxHeight: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

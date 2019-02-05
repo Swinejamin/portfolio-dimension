@@ -7,7 +7,10 @@
 /* Header */
 
 #header {
+  position: sticky;
+  top: 0;
   margin-bottom: 30px;
+  z-index: 100;
   @include vendor('display', 'flex');
   @include vendor('flex-direction', 'column');
   @include vendor('align-items', 'center');
@@ -18,18 +21,6 @@
       'filter #{_duration(article)} ease-in-out',
       'opacity #{_duration(article)} ease-in-out'
     )
-  );
-  background-image: -moz-radial-gradient(
-    rgba(0, 0, 0, 0.25) 25%,
-    rgba(0, 0, 0, 0) 55%
-  );
-  background-image: -webkit-radial-gradient(
-    rgba(0, 0, 0, 0.25) 25%,
-    rgba(0, 0, 0, 0) 55%
-  );
-  background-image: -ms-radial-gradient(
-    rgba(0, 0, 0, 0.25) 25%,
-    rgba(0, 0, 0, 0) 55%
   );
   background-image: radial-gradient(
     rgba(0, 0, 0, 0.25) 25%,
@@ -45,11 +36,11 @@
   }
 
   .logo {
-    width: 5.5rem;
-    height: 5.5rem;
-    line-height: 5.5rem;
+    width: 200px;
+    height: 200px;
     border: solid _size(border-width) _palette(border);
     border-radius: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,6 +79,7 @@
           'opacity #{_duration(article)} ease-in-out'
         )
       );
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
       @include vendor('transition-delay', '0.25s');
       padding: 3rem 2rem;
       max-height: 40rem;
@@ -96,20 +88,22 @@
       > :last-child {
         margin-bottom: 0;
       }
-    }
-
-    p {
-      text-transform: uppercase;
-      letter-spacing: _font(letter-spacing);
-      font-size: 0.8rem;
-      line-height: 2;
+      p {
+        text-transform: uppercase;
+        letter-spacing: _font(letter-spacing);
+        font-size: 1.6rem;
+        line-height: 2;
+        hyphens: none;
+        text-align: center;
+      }
     }
   }
 
   nav {
     transition: margin-top 0.3s ease;
     ul {
-      @include vendor('display', 'flex');
+      display: flex;
+      flex-direction: row;
       margin-bottom: 0;
       list-style: none;
       padding-left: 0;
@@ -132,7 +126,7 @@
           padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
           text-transform: uppercase;
           letter-spacing: _font(letter-spacing);
-          font-size: 0.8rem;
+          font-size: 1.6rem;
           border-bottom: 0;
 
           &:hover {
@@ -168,29 +162,6 @@
     }
   }
 
-  .body.is-article-visible & {
-    @include vendor('transform', 'scale(0.95)');
-    @include vendor('filter', 'blur(0.1rem)');
-    opacity: 0;
-  }
-
-  .body.is-loading & {
-    > * {
-      opacity: 0;
-    }
-
-    @include vendor('filter', 'blur(0.125rem)');
-
-    .content {
-      .inner {
-        max-height: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        opacity: 0;
-      }
-    }
-  }
-
   @include breakpoint(medium) {
     .content {
       p {
@@ -204,30 +175,47 @@
   @include breakpoint(small) {
     > * {
       margin-top: 2rem;
-
-      &:before {
-        top: calc(-2rem - 1px);
-        height: calc(2rem + 1px);
-      }
     }
 
     .logo {
-      width: 4.75rem;
-      height: 4.75rem;
-      line-height: 4.75rem;
+      width: 125px;
+      height: 125px;
 
       .icon {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
       }
     }
 
     .content {
+      &:before {
+        height: calc(2rem + 1px);
+      }
       .inner {
         padding: 2.5rem 1rem;
       }
 
       p {
         line-height: 1.875;
+      }
+    }
+    .content {
+      .blurb {
+        padding: 15px;
+        h1 {
+          line-height: 1.3;
+        }
+        p {
+          line-height: 1.25;
+        }
+      }
+    }
+    nav {
+      ul {
+        li {
+          a {
+            padding: 0 10px;
+          }
+        }
       }
     }
   }
@@ -243,14 +231,10 @@
 
     nav {
       ul {
-        @include vendor('flex-direction', 'column');
         min-width: 10rem;
         max-width: 100%;
 
         li {
-          border-left: 0;
-          border-top: solid _size(border-width) _palette(border);
-
           &:first-child {
             border-top: 0;
           }
@@ -273,8 +257,8 @@
   }
   &.inner {
     .logo {
-      height: 30px;
-      width: 30px;
+      height: 75px;
+      width: 75px;
     }
     .icon {
       font-size: 10px;

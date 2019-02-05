@@ -1,14 +1,22 @@
 import React, { Component } from 'react'
-import pic03 from '../images/pic03.jpg'
+import Img from 'gatsby-image'
+
+import { graphql } from 'gatsby'
 export default class About extends Component {
   static propTypes = {}
 
   render() {
+    const { data } = this.props
+    const { family } = data
+    console.log(family)
     return (
       <article id="about">
-        <h2 className="major">About Benjamin</h2>
+        <h2 className="major">About Me</h2>
         <span className="image main">
-          <img src={pic03} alt="" />
+          <Img
+            fluid={family.childImageSharp.fluid}
+            style={{ maxWidth: 600, margin: '0 auto' }}
+          />
         </span>
         <p>
           Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
@@ -22,3 +30,15 @@ export default class About extends Component {
     )
   }
 }
+
+export const pageQuery = graphql`
+  query {
+    family: file(relativePath: { eq: "family.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

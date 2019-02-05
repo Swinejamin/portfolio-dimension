@@ -14,7 +14,7 @@ export default class Contact extends Component {
           this.props.articleTimeout ? 'timeout' : ''
         }`}
       >
-        <h2 className="major">Contact Benjamin</h2>
+        <h2 className="major">Contact Me</h2>
         <form
           name="contact"
           data-netlify="true"

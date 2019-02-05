@@ -19,6 +19,13 @@ const Container = styled.div`
   );
   border-radius: 8px;
 `
+const Inner = styled.div`
+  max-height: 75vh;
+  overflow: auto;
+  @media screen and (max-width: 800px) {
+    max-height: 54vh;
+  }
+`
 const Layout = props => {
   const { children, location } = props
   const showFullHeader = ['', '/', '/success', '/success/'].includes(
@@ -58,8 +65,11 @@ const Layout = props => {
           </Helmet>
           <div id="bg" />
           <Header showFullHeader={showFullHeader} />
-
-          <Container>{children}</Container>
+          {children && (
+            <Container>
+              <Inner>{children}</Inner>
+            </Container>
+          )}
         </>
       )}
     />
