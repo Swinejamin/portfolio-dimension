@@ -18,7 +18,7 @@ export default class Contact extends Component {
         <form
           name="contact"
           data-netlify="true"
-          method="post"
+          method="POST"
           action="/success"
           data-netlify-honeypot="bot-field"
         >
