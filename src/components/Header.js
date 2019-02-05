@@ -70,8 +70,7 @@ const Header = props => {
 }
 
 Header.propTypes = {
-  onOpenArticle: PropTypes.func,
-  timeout: PropTypes.bool,
+  showFullHeader: PropTypes.bool,
 }
 Header.defaultProps = {
   showFullHeader: true,
