@@ -15,7 +15,14 @@ export default class Contact extends Component {
         }`}
       >
         <h2 className="major">Contact Benjamin</h2>
-        <form data-netlify="true" method="post">
+        <form
+          name="contact"
+          data-netlify="true"
+          method="post"
+          action="#"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="bot-field" />
           <div className="field half first">
             <label htmlFor="name">Name</label>
             <input type="text" name="name" id="name" required />
