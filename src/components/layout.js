@@ -17,6 +17,7 @@ const Container = styled.div`
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.9)
   );
+  border-radius: 8px;
 `
 const Layout = props => {
   const { children } = props
