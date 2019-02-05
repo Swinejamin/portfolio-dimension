@@ -19,7 +19,7 @@ export default class Contact extends Component {
           name="contact"
           data-netlify="true"
           method="post"
-          action="#"
+          action="#/success"
           data-netlify-honeypot="bot-field"
         >
           <input type="hidden" name="bot-field" />
