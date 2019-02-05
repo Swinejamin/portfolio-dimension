@@ -37,8 +37,7 @@ const Layout = props => {
     '/contact',
     '/contact/',
   ].includes(location.pathname)
-  console.log(location.pathname)
-  console.log(showFullHeader)
+
   return (
     <StaticQuery
       query={graphql`

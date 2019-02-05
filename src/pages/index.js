@@ -1,13 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Box = styled.section`
-  display: flex;
-  flex-direction: row;
-  @media screen and (min-width: 800px) {
-    flex-direction: row;
-  }
-`
 const List = styled.ul`
   margin: 0 auto;
   font-size: 2rem;
@@ -34,7 +27,7 @@ class IndexPage extends React.Component {
       <List>
         <li>Creative</li>
         <li>Passionate</li>
-        <li>Creative</li>
+        <li>Unique</li>
       </List>
     ) : null
   }
