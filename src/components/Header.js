@@ -60,8 +60,6 @@ Header.propTypes = {
   timeout: PropTypes.bool,
 }
 Header.defaultProps = {
-  location: {
-    pathname: '/',
-  },
+  showFullHeader: true,
 }
 export default Header
