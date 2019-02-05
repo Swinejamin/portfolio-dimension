@@ -3,10 +3,10 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
 const Success = props => (
-  <Layout>
+  <>
     <Helmet>
-      <title>Success Page</title>
-      <meta name="description" content="Success Page" />
+      <title>Message Submitted!</title>
+      <meta name="description" content="Message submitted page" />
     </Helmet>
 
     <section id="one">
@@ -16,7 +16,7 @@ const Success = props => (
         <p>Your message has been submitted!</p>
       </div>
     </section>
-  </Layout>
+  </>
 )
 
 export default Success
