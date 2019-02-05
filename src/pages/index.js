@@ -15,6 +15,18 @@ const List = styled.ul`
   align-content: center;
   li {
     padding: 0;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    li {
+      font-size: 3rem;
+    }
   }
 `
 
