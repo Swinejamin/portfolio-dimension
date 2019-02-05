@@ -21,7 +21,9 @@ const Container = styled.div`
 `
 const Layout = props => {
   const { children, location } = props
-  const showFullHeader = ['', '/', '/success'].includes(location.pathname)
+  const showFullHeader = ['', '/', '/success', '/success/'].includes(
+    location.pathname
+  )
 
   return (
     <StaticQuery
