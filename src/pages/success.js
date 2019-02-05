@@ -9,17 +9,13 @@ const Success = props => (
       <meta name="description" content="Success Page" />
     </Helmet>
 
-    <div id="main" className="alt">
-      <section id="one">
-        <div className="inner">
-          <header className="major">
-            <h1>Success/Thank You Page</h1>
-          </header>
-          <span className="image main" />
-          <p>Thanks for contacting me!</p>
-        </div>
-      </section>
-    </div>
+    <section id="one">
+      <h2>Thanks!</h2>
+      <div className="inner">
+        <span className="image main" />
+        <p>Your message has been submitted!</p>
+      </div>
+    </section>
   </Layout>
 )
 

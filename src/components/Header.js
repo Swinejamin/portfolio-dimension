@@ -21,44 +21,41 @@ const links = [
   },
 ]
 
-const Header = props => (
-  <header
-    id="header"
-    className={`${props.location.pathname === '/' ? '' : 'inner'}`}
-  >
-    <nav>
-      <ul>
-        {links.map((link, index) => {
-          const { title, to } = link
-          return (
-            <li>
-              <Link
-                fade
-                to={to}
-                entry={{ state: { pageIndex: index } }}
-                exit={{ state: { pageIndex: index } }}
-              >
-                {title}
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </nav>
-    <div className="logo">
-      <span className="icon fas fa-desktop" />
-    </div>
-    <div className={`content`}>
-      <div className={`blurb`}>
-        <h1>Benjamin Swineford</h1>
-        <p>
-          A front end developer passionate about building things in{' '}
-          <a href="https://reactjs.org/">React</a>
-        </p>
+const Header = props => {
+  const { location } = props
+  const showFullHeader = ['', '/', '/success'].includes(location.pathname)
+  return (
+    <header
+      id="header"
+      className={`${props.location.pathname === '/' ? '' : 'inner'}`}
+    >
+      <nav>
+        <ul>
+          {links.map((link, index) => {
+            const { title, to } = link
+            return (
+              <li>
+                <Link to={to}>{title}</Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
+      <div className="logo">
+        <span className="icon fas fa-desktop" />
       </div>
-    </div>
-  </header>
-)
+      <div className={`content`}>
+        <div className={`blurb`}>
+          <h1>Benjamin Swineford</h1>
+          <p>
+            A front end developer passionate about building things in{' '}
+            <a href="https://reactjs.org/">React</a>
+          </p>
+        </div>
+      </div>
+    </header>
+  )
+}
 
 Header.propTypes = {
   onOpenArticle: PropTypes.func,
