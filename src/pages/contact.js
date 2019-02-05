@@ -15,25 +15,25 @@ export default class Contact extends Component {
         }`}
       >
         <h2 className="major">Contact Benjamin</h2>
-        <form data-netlify="true" method="post" action="#">
+        <form data-netlify="true" method="post">
           <div className="field half first">
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
           </div>
           <div className="field half">
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
+            <input type="email" name="email" id="email" required />
           </div>
           <div className="field">
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="4" />
+            <textarea name="message" required id="message" rows="4" />
           </div>
           <ul className="actions">
             <li>
-              <input type="submit" value="Send Message" className="special" />
+              <butotn type="submit" value="Send Message" className="special" />
             </li>
             <li>
-              <input type="reset" value="Reset" />
+              <button type="reset" value="Reset" />
             </li>
           </ul>
         </form>
