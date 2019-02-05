@@ -22,10 +22,9 @@ const links = [
 ]
 
 const Header = props => {
-  const { location } = props
-  const showFullHeader = ['', '/', '/success'].includes(location.pathname)
+  const { showFullHeader } = props
   console.log(showFullHeader)
-  console.log(location.pathname)
+
   return (
     <header id="header" className={`${showFullHeader ? '' : 'inner'}`}>
       <nav>

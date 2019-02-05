@@ -20,7 +20,8 @@ const Container = styled.div`
   border-radius: 8px;
 `
 const Layout = props => {
-  const { children } = props
+  const { children, location } = props
+  const showFullHeader = ['', '/', '/success'].includes(location.pathname)
 
   return (
     <StaticQuery
@@ -54,7 +55,7 @@ const Layout = props => {
             />
           </Helmet>
           <div id="bg" />
-          <Header {...props} />
+          <Header showFullHeader={showFullHeader} />
 
           <Container>{children}</Container>
         </>
