@@ -88,6 +88,7 @@ textarea {
       'background-color #{_duration(transition)} ease-in-out'
     )
   );
+  font-size: 1.6rem;
   background: transparent;
   border-radius: _size(border-radius);
   border: solid _size(border-width) _palette(border);
@@ -161,7 +162,6 @@ input[type='radio'] {
   opacity: 0;
   width: 1rem;
   z-index: -1;
-
   & + label {
     @include icon;
     @include vendor('user-select', 'none');
