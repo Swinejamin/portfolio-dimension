@@ -29,9 +29,14 @@ const Inner = styled.div`
 `
 const Layout = props => {
   const { children, location } = props
-  const showFullHeader = ['', '/', '/success', '/success/'].includes(
-    location.pathname
-  )
+  const showFullHeader = ![
+    '/work',
+    '/work/',
+    '/about',
+    '/about/',
+    '/contact',
+    '/contact/',
+  ].includes(location.pathname)
   console.log(location.pathname)
   console.log(showFullHeader)
   return (
