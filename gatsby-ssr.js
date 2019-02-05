@@ -5,3 +5,9 @@
  */
 
 // You can delete this file if you're not using it
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+const mainTheme = { colors: { mainDark: 'red' } }
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={mainTheme}>{element}</ThemeProvider>
+)
