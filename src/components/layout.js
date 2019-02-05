@@ -11,7 +11,7 @@ const Container = styled.div`
   max-width: 1200px;
   width: 80vw;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.7),
@@ -22,6 +22,7 @@ const Container = styled.div`
 const Inner = styled.div`
   max-height: 75vh;
   overflow: auto;
+  padding: 0 10px;
   @media screen and (max-width: 800px) {
     max-height: 54vh;
   }

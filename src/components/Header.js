@@ -77,7 +77,7 @@ Header.defaultProps = {
   showFullHeader: true,
 }
 export default Header
-export const imageQuery = graphql`
+const imageQuery = graphql`
   query {
     headshot: file(relativePath: { eq: "headshot.jpg" }) {
       childImageSharp {
