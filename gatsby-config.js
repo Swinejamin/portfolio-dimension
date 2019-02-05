@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Benjamin Swineford | Front End Developer',
     author: 'Benjamin Swineford',
-    description: 'A portfolio for Benjamin Swineford',
+    description:
+      'Benjamin Swineford is a front end developer in central Illinois. He loves to work with the latest specs in HTML5, CSS3, and ES2018+',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
