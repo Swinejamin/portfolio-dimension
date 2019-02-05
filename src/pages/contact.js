@@ -30,10 +30,14 @@ export default class Contact extends Component {
           </div>
           <ul className="actions">
             <li>
-              <butotn type="submit" value="Send Message" className="special" />
+              <button type="submit" value="Send Message" className="special">
+                Submit
+              </button>
             </li>
             <li>
-              <button type="reset" value="Reset" />
+              <button type="reset" value="Reset">
+                Reset
+              </button>
             </li>
           </ul>
         </form>
