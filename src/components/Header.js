@@ -6,7 +6,7 @@ import { graphql, StaticQuery } from 'gatsby'
 const links = [
   {
     to: '/',
-    title: 'Intro',
+    title: 'Home',
   },
   {
     to: '/about',
