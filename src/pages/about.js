@@ -15,11 +15,14 @@ const StyledHeader = styled.h2`
     white-space: nowrap;
   }
 `
-const StyledList = styled.ul`
-  font-size: 1.5rem;
+const StyledSection = styled.section`
+  padding-right: 25px;
   @media screen and (min-width: 1000px) {
     padding-right: 45px;
   }
+`
+const StyledList = styled.ul`
+  font-size: 1.5rem;
 `
 export default class About extends Component {
   static propTypes = {}
@@ -53,7 +56,7 @@ export default class About extends Component {
           masterpiece!
         </p>
         <Row>
-          <section>
+          <StyledSection>
             <StyledHeader className="">I'm great at:</StyledHeader>
             <StyledList>
               <li>HTML5 (Semantic markup, structured microdata)</li>
@@ -63,22 +66,22 @@ export default class About extends Component {
               <li>ES2018+ (Babel, Webpack, Node)</li>
               <li>PHP</li>
             </StyledList>
-          </section>
-          <section>
+          </StyledSection>
+          <StyledSection>
             <StyledHeader className="">I love working with:</StyledHeader>
             <StyledList>
-              <li>HTML5 (Semantic markup, structured microdata)</li>
-              <li>CSS3 (animations, responsive layouts, flexbox, grid)</li>
+              <li>React</li>
+              <li>GraphQL</li>
             </StyledList>
-          </section>
-          <section>
+          </StyledSection>
+          <StyledSection>
             <StyledHeader className="">I want to learn:</StyledHeader>
             <StyledList>
               <li>Typescript</li>
               <li>Advanced CSS Grid</li>
               <li>TDD with Jest</li>
             </StyledList>
-          </section>
+          </StyledSection>
         </Row>
       </article>
     )
