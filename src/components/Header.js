@@ -60,7 +60,7 @@ const Header = props => {
         <div className={`blurb`}>
           <h1>Benjamin Swineford</h1>
           <p>
-            A front end developer passionate about building things in{' '}
+            A front end developer who loves building things in{' '}
             <a href="https://reactjs.org/">React</a>
           </p>
         </div>
