@@ -105,7 +105,7 @@ export const StyledIconList = styled.ul`
 
     a {
       border-radius: 100%;
-      box-shadow: inset 0 0 0 2px white;
+      box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.75);
       height: 40px;
       width: 40px;
       text-align: center;
