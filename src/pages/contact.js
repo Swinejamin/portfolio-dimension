@@ -25,15 +25,15 @@ export default class Contact extends Component {
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <StyledFormField className="field half first">
+          <StyledFormField className="half first">
             <StyledLabel htmlFor="name">Name</StyledLabel>
             <input type="text" name="name" id="name" required />
           </StyledFormField>
-          <StyledFormField className="field half">
+          <StyledFormField className="half">
             <StyledLabel htmlFor="email">Email</StyledLabel>
             <input type="email" name="email" id="email" required />
           </StyledFormField>
-          <StyledFormField className="field">
+          <StyledFormField>
             <StyledLabel htmlFor="message">Message</StyledLabel>
             <textarea name="message" required id="message" rows="4" />
           </StyledFormField>
