@@ -7,8 +7,8 @@ const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 30px;
-  @media screen and (min-width: 1200px) {
-    grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 `;
 const projects = [
