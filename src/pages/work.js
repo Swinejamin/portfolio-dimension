@@ -104,9 +104,8 @@ const Work = props => {
                 fluid={data[image].childImageSharp.fluid}
                 alt="Benjamin with family"
                 style={{
-                  maxWidth: 400,
+                  maxWidth: 300,
                   margin: '0',
-
                   width: '100%',
                   objectFit: 'cover',
                 }}
@@ -126,42 +125,42 @@ export const pageQuery = graphql`
   query {
     vale: file(relativePath: { eq: "vale.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     amish: file(relativePath: { eq: "amish.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     grossinger: file(relativePath: { eq: "grossinger.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     toyShoppe: file(relativePath: { eq: "toyShoppe.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     franke: file(relativePath: { eq: "franke.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     dax: file(relativePath: { eq: "dax.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
