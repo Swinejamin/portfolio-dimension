@@ -5,13 +5,16 @@ import { graphql } from 'gatsby';
 
 const Grid = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 30px;
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
+  }
 `;
 const projects = [
   {
     title: 'Vale Church',
-    link: 'https://vale.church',
+    link: 'http://vale.church',
     image: 'vale',
     order: 2,
   },
@@ -29,7 +32,7 @@ const projects = [
   },
   {
     title: 'Franke Construction',
-    link: 'https://vale.church',
+    link: 'https://frankeconstruction.com/',
     image: 'franke',
   },
   {
