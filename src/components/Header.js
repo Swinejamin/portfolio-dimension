@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import { graphql, StaticQuery } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
+import { graphql, StaticQuery } from 'gatsby';
 const links = [
   {
     to: '/',
@@ -20,22 +20,22 @@ const links = [
     to: '/contact',
     title: 'Contact',
   },
-]
+];
 
 const Header = props => {
-  const { showFullHeader } = props
+  const { showFullHeader } = props;
 
   return (
     <header id="header" className={`${showFullHeader ? '' : 'inner'}`}>
       <nav>
         <ul>
           {links.map((link, index) => {
-            const { title, to } = link
+            const { title, to } = link;
             return (
-              <li>
+              <li key={index}>
                 <Link to={to}>{title}</Link>
               </li>
-            )
+            );
           })}
         </ul>
       </nav>
@@ -67,16 +67,16 @@ const Header = props => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   showFullHeader: PropTypes.bool,
-}
+};
 Header.defaultProps = {
   showFullHeader: true,
-}
-export default Header
+};
+export default Header;
 const imageQuery = graphql`
   query {
     headshot: file(relativePath: { eq: "headshot.jpg" }) {
@@ -87,4 +87,4 @@ const imageQuery = graphql`
       }
     }
   }
-`
+`;
