@@ -1,17 +1,13 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   StyledButtonList,
   StyledForm,
   StyledFormField,
   StyledLabel,
   StyledIconList,
-} from '../components/Contact'
+} from '../components/Contact';
 export default class Contact extends Component {
-  static propTypes = {
-    prop: PropTypes,
-  }
-
   render() {
     return (
       <article
@@ -98,6 +94,6 @@ export default class Contact extends Component {
           </li>
         </StyledIconList>
       </article>
-    )
+    );
   }
 }
