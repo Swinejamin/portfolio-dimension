@@ -85,7 +85,6 @@ const Link = styled.a`
 `;
 const Work = props => {
   const { data } = props;
-  console.log(data);
   return (
     <Grid>
       {projects.sort((a, b) => a.order - b.order).map(project => {
