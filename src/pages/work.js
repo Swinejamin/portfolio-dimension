@@ -104,7 +104,6 @@ const Work = props => {
                 fluid={data[image].childImageSharp.fluid}
                 alt="Benjamin with family"
                 style={{
-                  maxWidth: 300,
                   margin: '0',
                   width: '100%',
                   objectFit: 'cover',
