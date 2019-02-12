@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-const gutter = 30
+import styled from 'styled-components';
+const gutter = 30;
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-`
+`;
 
 export const StyledFormField = styled.div`
   flex-shrink: 0;
@@ -44,9 +44,9 @@ export const StyledFormField = styled.div`
     outline: 0;
     text-decoration: none;
     width: 100%;
-
+    box-shadow: inset 0 0 5px 0 rgba(0, 255, 255, 0.75);
     &:invalid {
-      box-shadow: none;
+      box-shadow: inset 0 0 5px 0 rgba(200, 50, 50, 0.75);
     }
 
     &:focus {
@@ -54,7 +54,7 @@ export const StyledFormField = styled.div`
       box-shadow: 0 0 0 3px white;
     }
   }
-`
+`;
 
 export const StyledLabel = styled.label`
   color: white;
@@ -65,7 +65,7 @@ export const StyledLabel = styled.label`
   line-height: 1.5;
   margin: 0 0 ${gutter * 0.25}px 0;
   text-transform: uppercase;
-`
+`;
 export const StyledButtonList = styled.ul`
   margin-top: 15px;
   button {
@@ -89,7 +89,7 @@ export const StyledButtonList = styled.ul`
       }
     }
   }
-`
+`;
 export const StyledIconList = styled.ul`
   cursor: default;
   list-style: none;
@@ -105,7 +105,7 @@ export const StyledIconList = styled.ul`
 
     a {
       border-radius: 100%;
-      box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.75);
+      box-shadow: inset 0 0 5px 0 rgba(0, 255, 255, 0.75);
       height: 40px;
       width: 40px;
       text-align: center;
@@ -132,6 +132,7 @@ export const StyledIconList = styled.ul`
       height: 0;
       width: 0;
       position: absolute;
+      overflow: hidden;
     }
   }
-`
+`;
